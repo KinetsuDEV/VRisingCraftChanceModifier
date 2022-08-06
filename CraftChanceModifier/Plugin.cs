@@ -10,6 +10,7 @@ namespace CraftChanceModifier
 {
     [BepInPlugin(PLUGIN_GUID, PLUGIN_NAME, PLUGIN_VERSION)]
     [BepInDependency("xyz.molenzwiebel.wetstone")]
+    [Reloadable]
     public class Plugin : BasePlugin
     {
         private const string PLUGIN_GUID = "CraftChanceModifier";

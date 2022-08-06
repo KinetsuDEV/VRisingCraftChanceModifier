@@ -13,13 +13,11 @@
     </RestoreSources>
     <VRisingPath>D:\Steam\steamapps\common\VRising\VRising_Server</VRisingPath>
     <UnhollowedDllPath>$(VRisingPath)\BepInEx\unhollowed</UnhollowedDllPath>
-    <PluginsPath>$(VRisingPath)\BepInEx\plugins</PluginsPath>
+    <PluginsPath>$(VRisingPath)\BepInEx\WetstonePlugins</PluginsPath>
   </PropertyGroup>
 
   <Target Name="CopyDLLs" AfterTargets="Build">
-    <Message Text="Copying output files to plugins folder." Importance="High" />
     <Copy SourceFiles="$(TargetDir)$(ProjectName).dll;$(TargetDir)$(ProjectName).pdb" DestinationFolder="$(PluginsPath)" />
-    <Message Text="Copied." Importance="High" />
   </Target>
 
   <ItemGroup>
