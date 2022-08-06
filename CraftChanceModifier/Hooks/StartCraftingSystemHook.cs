@@ -2,6 +2,7 @@
 using HarmonyLib;
 using ProjectM;
 using System;
+using VRisingUtils.Utils;
 
 namespace CraftChanceModifier.Hooks
 {
@@ -14,11 +15,11 @@ namespace CraftChanceModifier.Hooks
         {
             try
             {
-                CraftChanceSystem.CraftSucceeded(__instance);
+                CraftChanceSystem.RollCraftChance(__instance);
             }
             catch (Exception e)
             {
-                Plugin.Logger.LogError(e);
+                LogUtils.Logger.LogError(e);
             }
         }
     }
